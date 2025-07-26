@@ -1,0 +1,189 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>
+      <span class="material-icons">dashboard</span>
+      Customer Dashboard
+    </h1>
+    <p>Access your business data and manage your operations</p>
+  </div>
+
+  <!-- Dashboard Overview Cards -->
+  <div class="overview-cards">
+    <div class="overview-card">
+      <div class="card-icon">
+        <span class="material-icons">question_answer</span>
+      </div>
+      <div class="card-content">
+        <h3>Inquiry Data</h3>
+        <p class="card-description">View and manage your product inquiries and requests</p>
+        <div class="card-stats">
+          <span class="stat">Active: 8</span>
+          <span class="stat">Total: 45</span>
+        </div>
+        <button class="btn btn-primary" routerLink="/dashboard/inquiry">
+          <span class="material-icons">visibility</span>
+          View Inquiries
+        </button>
+      </div>
+    </div>
+
+    <div class="overview-card">
+      <div class="card-icon">
+        <span class="material-icons">shopping_cart</span>
+      </div>
+      <div class="card-content">
+        <h3>Sale Order Data</h3>
+        <p class="card-description">Track your sales orders and order status</p>
+        <div class="card-stats">
+          <span class="stat">Pending: 12</span>
+          <span class="stat">Completed: 156</span>
+        </div>
+        <button class="btn btn-primary" routerLink="/dashboard/sales">
+          <span class="material-icons">visibility</span>
+          View Orders
+        </button>
+      </div>
+    </div>
+
+    <div class="overview-card">
+      <div class="card-icon">
+        <span class="material-icons">local_shipping</span>
+      </div>
+      <div class="card-content">
+        <h3>List of Delivery</h3>
+        <p class="card-description">Monitor delivery status and track shipments</p>
+        <div class="card-stats">
+          <span class="stat">In Transit: 5</span>
+          <span class="stat">Delivered: 142</span>
+        </div>
+        <button class="btn btn-primary" routerLink="/dashboard/delivery">
+          <span class="material-icons">visibility</span>
+          View Deliveries
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <h2>Quick Actions</h2>
+    <div class="actions-grid">
+      <button class="action-btn">
+        <span class="material-icons">add</span>
+        <span>New Inquiry</span>
+      </button>
+      <button class="action-btn">
+        <span class="material-icons">receipt</span>
+        <span>Download Invoice</span>
+      </button>
+      <button class="action-btn">
+        <span class="material-icons">support_agent</span>
+        <span>Contact Support</span>
+      </button>
+      <button class="action-btn">
+        <span class="material-icons">schedule</span>
+        <span>Schedule Meeting</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="recent-activity">
+    <h2>Recent Activity</h2>
+    <div class="activity-list">
+      <div class="activity-item">
+        <div class="activity-icon">
+          <span class="material-icons">local_shipping</span>
+        </div>
+        <div class="activity-content">
+          <h4>Delivery Completed</h4>
+          <p>Order #SO-2024-001 has been delivered successfully</p>
+          <span class="activity-time">2 hours ago</span>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon">
+          <span class="material-icons">shopping_cart</span>
+        </div>
+        <div class="activity-content">
+          <h4>New Order Placed</h4>
+          <p>Order #SO-2024-015 has been confirmed</p>
+          <span class="activity-time">1 day ago</span>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon">
+          <span class="material-icons">question_answer</span>
+        </div>
+        <div class="activity-content">
+          <h4>Inquiry Updated</h4>
+          <p>Inquiry #INQ-2024-008 status changed to "In Progress"</p>
+          <span class="activity-time">2 days ago</span>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon">
+          <span class="material-icons">receipt</span>
+        </div>
+        <div class="activity-content">
+          <h4>Invoice Generated</h4>
+          <p>Invoice #INV-2024-012 has been generated</p>
+          <span class="activity-time">3 days ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Performance Metrics -->
+  <div class="performance-metrics">
+    <h2>Performance Metrics</h2>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-header">
+          <h4>Order Fulfillment Rate</h4>
+          <span class="metric-value">98.5%</span>
+        </div>
+        <div class="metric-progress">
+          <div class="progress-bar" style="width: 98.5%"></div>
+        </div>
+        <p class="metric-description">Orders delivered on time</p>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <h4>Customer Satisfaction</h4>
+          <span class="metric-value">4.8/5</span>
+        </div>
+        <div class="metric-progress">
+          <div class="progress-bar" style="width: 96%"></div>
+        </div>
+        <p class="metric-description">Based on 89 reviews</p>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <h4>Response Time</h4>
+          <span class="metric-value">2.3 hrs</span>
+        </div>
+        <div class="metric-progress">
+          <div class="progress-bar" style="width: 85%"></div>
+        </div>
+        <p class="metric-description">Average inquiry response</p>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <h4>Revenue Growth</h4>
+          <span class="metric-value">+15.2%</span>
+        </div>
+        <div class="metric-progress">
+          <div class="progress-bar" style="width: 75%"></div>
+        </div>
+        <p class="metric-description">Compared to last quarter</p>
+      </div>
+    </div>
+  </div>
+</div>

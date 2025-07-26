@@ -1,0 +1,123 @@
+<div class="welcome-container">
+  <div class="welcome-header">
+    <div class="welcome-content">
+      <h1 class="welcome-title">
+        <span class="material-icons welcome-icon">waving_hand</span>
+        Welcome back, {{ customer?.name || 'Customer' }}!
+      </h1>
+      <p class="welcome-subtitle">
+        Select any one of the below options to manage your account
+      </p>
+    </div>
+  </div>
+
+  <div class="options-grid">
+    <!-- Customer Profile Option -->
+    <div class="option-card" routerLink="/profile">
+      <div class="option-icon">
+        <span class="material-icons">person</span>
+      </div>
+      <div class="option-content">
+        <h3>Customer Profile</h3>
+        <p>View and manage your personal information, contact details, and account settings</p>
+        <div class="option-features">
+          <span class="feature-tag">Personal Info</span>
+          <span class="feature-tag">Contact Details</span>
+          <span class="feature-tag">Account Settings</span>
+        </div>
+      </div>
+      <div class="option-arrow">
+        <span class="material-icons">arrow_forward</span>
+      </div>
+    </div>
+
+    <!-- Customer Dashboard Option -->
+    <div class="option-card" routerLink="/dashboard">
+      <div class="option-icon dashboard-icon">
+        <span class="material-icons">dashboard</span>
+      </div>
+      <div class="option-content">
+        <h3>Customer Dashboard</h3>
+        <p>Access your business data including inquiries, sales orders, and delivery information</p>
+        <div class="option-features">
+          <span class="feature-tag">Inquiry Data</span>
+          <span class="feature-tag">Sale Order Data</span>
+          <span class="feature-tag">List of Delivery</span>
+        </div>
+      </div>
+      <div class="option-arrow">
+        <span class="material-icons">arrow_forward</span>
+      </div>
+    </div>
+
+    <!-- Financial Sheet Option -->
+    <div class="option-card" routerLink="/financial">
+      <div class="option-icon financial-icon">
+        <span class="material-icons">account_balance</span>
+      </div>
+      <div class="option-content">
+        <h3>Financial Sheet</h3>
+        <p>Review your financial information including invoices, payments, and sales data</p>
+        <div class="option-features">
+          <span class="feature-tag">Invoice Details</span>
+          <span class="feature-tag">Payments & Aging</span>
+          <span class="feature-tag">Credit/Debit Memo</span>
+          <span class="feature-tag">Overall Sales Data</span>
+        </div>
+      </div>
+      <div class="option-arrow">
+        <span class="material-icons">arrow_forward</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Stats Section -->
+  <div class="quick-stats">
+    <h2>Quick Overview</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <span class="material-icons">shopping_cart</span>
+        </div>
+        <div class="stat-content">
+          <h4>Active Orders</h4>
+          <p class="stat-number">12</p>
+          <p class="stat-change positive">+2 this week</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <span class="material-icons">local_shipping</span>
+        </div>
+        <div class="stat-content">
+          <h4>Pending Deliveries</h4>
+          <p class="stat-number">5</p>
+          <p class="stat-change neutral">No change</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <span class="material-icons">receipt</span>
+        </div>
+        <div class="stat-content">
+          <h4>Outstanding Invoices</h4>
+          <p class="stat-number">$24,500</p>
+          <p class="stat-change negative">+$1,200</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <span class="material-icons">trending_up</span>
+        </div>
+        <div class="stat-content">
+          <h4>Total Sales</h4>
+          <p class="stat-number">$156,800</p>
+          <p class="stat-change positive">+12% this month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

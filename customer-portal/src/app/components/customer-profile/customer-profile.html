@@ -1,0 +1,207 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h1>
+      <span class="material-icons">person</span>
+      Customer Profile
+    </h1>
+    <p>Manage your personal information and account settings</p>
+  </div>
+
+  <div class="profile-content">
+    <!-- Personal Information Card -->
+    <div class="profile-card">
+      <div class="card-header">
+        <h2>
+          <span class="material-icons">account_circle</span>
+          Personal Information
+        </h2>
+        <button class="btn btn-outline edit-btn" (click)="toggleEdit()">
+          <span class="material-icons">{{ isEditing ? 'save' : 'edit' }}</span>
+          {{ isEditing ? 'Save Changes' : 'Edit Profile' }}
+        </button>
+      </div>
+
+      <form [formGroup]="profileForm" class="profile-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Customer ID</label>
+            <input
+              type="text"
+              formControlName="customerId"
+              class="form-control"
+              [readonly]="true"
+              [class.readonly]="true"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              [readonly]="!isEditing"
+              [class.readonly]="!isEditing"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              [readonly]="!isEditing"
+              [class.readonly]="!isEditing"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              formControlName="phone"
+              class="form-control"
+              [readonly]="!isEditing"
+              [class.readonly]="!isEditing"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Company Name</label>
+          <input
+            type="text"
+            formControlName="company"
+            class="form-control"
+            [readonly]="!isEditing"
+            [class.readonly]="!isEditing"
+          />
+        </div>
+
+        <div class="form-actions" *ngIf="isEditing">
+          <button type="button" class="btn btn-outline" (click)="cancelEdit()">
+            <span class="material-icons">cancel</span>
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary" (click)="saveProfile()">
+            <span class="material-icons">save</span>
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Account Statistics Card -->
+    <div class="profile-card">
+      <div class="card-header">
+        <h2>
+          <span class="material-icons">analytics</span>
+          Account Statistics
+        </h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <span class="material-icons">shopping_cart</span>
+          </div>
+          <div class="stat-info">
+            <h4>Total Orders</h4>
+            <p class="stat-value">156</p>
+            <p class="stat-period">Last 12 months</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">
+            <span class="material-icons">payments</span>
+          </div>
+          <div class="stat-info">
+            <h4>Total Spent</h4>
+            <p class="stat-value">$89,450</p>
+            <p class="stat-period">Last 12 months</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">
+            <span class="material-icons">local_shipping</span>
+          </div>
+          <div class="stat-info">
+            <h4>Deliveries</h4>
+            <p class="stat-value">142</p>
+            <p class="stat-period">Last 12 months</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">
+            <span class="material-icons">star</span>
+          </div>
+          <div class="stat-info">
+            <h4>Customer Rating</h4>
+            <p class="stat-value">4.8/5</p>
+            <p class="stat-period">Based on 89 reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Account Settings Card -->
+    <div class="profile-card">
+      <div class="card-header">
+        <h2>
+          <span class="material-icons">settings</span>
+          Account Settings
+        </h2>
+      </div>
+
+      <div class="settings-list">
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Change Password</h4>
+            <p>Update your account password for enhanced security</p>
+          </div>
+          <button class="btn btn-outline">
+            <span class="material-icons">lock</span>
+            Change
+          </button>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Notification Preferences</h4>
+            <p>Manage email and SMS notification settings</p>
+          </div>
+          <button class="btn btn-outline">
+            <span class="material-icons">notifications</span>
+            Configure
+          </button>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Privacy Settings</h4>
+            <p>Control your data privacy and sharing preferences</p>
+          </div>
+          <button class="btn btn-outline">
+            <span class="material-icons">security</span>
+            Manage
+          </button>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Download Data</h4>
+            <p>Export your account data and transaction history</p>
+          </div>
+          <button class="btn btn-outline">
+            <span class="material-icons">download</span>
+            Export
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

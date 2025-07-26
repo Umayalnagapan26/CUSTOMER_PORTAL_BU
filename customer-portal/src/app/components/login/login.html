@@ -1,0 +1,97 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <div class="logo-large">
+        <svg width="60" height="60" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="url(#gradient1)"/>
+          <path d="M12 16L20 8L28 16L20 24L12 16Z" fill="white"/>
+          <path d="M12 24L20 16L28 24L20 32L12 24Z" fill="white" fill-opacity="0.8"/>
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1>Welcome Back</h1>
+      <p>Login to access your customer portal</p>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="customerId" class="form-label">
+          <span class="material-icons">person</span>
+          Customer ID
+        </label>
+        <input
+          type="text"
+          id="customerId"
+          formControlName="customerId"
+          class="form-control"
+          placeholder="Enter your Customer ID"
+          [class.error]="isFieldInvalid('customerId')"
+        />
+        <div class="error-message" *ngIf="isFieldInvalid('customerId')">
+          Customer ID is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">
+          <span class="material-icons">lock</span>
+          Password
+        </label>
+        <div class="password-input">
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Enter your password"
+            [class.error]="isFieldInvalid('password')"
+          />
+          <button
+            type="button"
+            class="password-toggle"
+            (click)="togglePassword()"
+          >
+            <span class="material-icons">
+              {{ showPassword ? 'visibility_off' : 'visibility' }}
+            </span>
+          </button>
+        </div>
+        <div class="error-message" *ngIf="isFieldInvalid('password')">
+          Password is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary login-btn"
+          [disabled]="isLoading || loginForm.invalid"
+        >
+          <span class="material-icons" *ngIf="!isLoading">login</span>
+          <div class="spinner" *ngIf="isLoading"></div>
+          {{ isLoading ? 'Logging In...' : 'Login' }}
+        </button>
+      </div>
+
+      <div class="demo-credentials">
+        <h4>Demo Credentials:</h4>
+        <div class="credential-item">
+          <strong>Customer ID:</strong> CUST001, CUST002, CUST003, CUST004, CUST005
+        </div>
+        <div class="credential-item">
+          <strong>Password:</strong> password123
+        </div>
+      </div>
+    </form>
+
+    <div class="error-alert" *ngIf="errorMessage">
+      <span class="material-icons">error</span>
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
