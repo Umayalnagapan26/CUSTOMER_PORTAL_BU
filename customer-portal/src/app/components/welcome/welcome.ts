@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AuthService, Customer } from '../../services/auth';
 
+
 @Component({
   selector: 'app-welcome',
   standalone: true,
