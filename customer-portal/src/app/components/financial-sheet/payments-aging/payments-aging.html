@@ -1,1 +1,68 @@
-<p>payments-aging works!</p>
+<div class="payments-container">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a routerLink="/financial" class="breadcrumb-link">
+        <span class="material-icons">arrow_back</span>
+        Back to Financial Sheet
+      </a>
+    </div>
+    <h1>
+      <span class="material-icons">payments</span>
+      Payments & Aging
+    </h1>
+    <p>Track payments and monitor account aging</p>
+  </div>
+
+  <div class="payments-content">
+    <div class="aging-stats">
+      <div class="stat-card">
+        <h3>Current (0-30 days)</h3>
+        <p class="stat-number">$16,300</p>
+      </div>
+      <div class="stat-card">
+        <h3>30-60 days</h3>
+        <p class="stat-number">$5,200</p>
+      </div>
+      <div class="stat-card">
+        <h3>Over 60 days</h3>
+        <p class="stat-number">$3,000</p>
+      </div>
+    </div>
+
+    <div class="aging-breakdown">
+      <h2>Aging Analysis</h2>
+      <div class="aging-item">
+        <div class="aging-header">
+          <h4>0-30 Days</h4>
+          <span class="amount current">$16,300</span>
+        </div>
+        <p>5 invoices in this category</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 66%"></div>
+        </div>
+      </div>
+
+      <div class="aging-item">
+        <div class="aging-header">
+          <h4>30-60 Days</h4>
+          <span class="amount warning">$5,200</span>
+        </div>
+        <p>2 invoices in this category</p>
+        <div class="progress-bar">
+          <div class="progress warning" style="width: 21%"></div>
+        </div>
+      </div>
+
+      <div class="aging-item">
+        <div class="aging-header">
+          <h4>Over 60 Days</h4>
+          <span class="amount overdue">$3,000</span>
+        </div>
+        <p>2 invoices in this category</p>
+        <div class="progress-bar">
+          <div class="progress overdue" style="width: 13%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

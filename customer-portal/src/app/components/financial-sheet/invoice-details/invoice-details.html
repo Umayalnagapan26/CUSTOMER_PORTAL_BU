@@ -1,1 +1,71 @@
-<p>invoice-details works!</p>
+<div class="invoice-container">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a routerLink="/financial" class="breadcrumb-link">
+        <span class="material-icons">arrow_back</span>
+        Back to Financial Sheet
+      </a>
+    </div>
+    <h1>
+      <span class="material-icons">receipt</span>
+      Invoice Details
+    </h1>
+    <p>View and manage your invoices and billing information</p>
+  </div>
+
+  <div class="invoice-content">
+    <div class="invoice-stats">
+      <div class="stat-card">
+        <h3>Outstanding Amount</h3>
+        <p class="stat-number">$24,500</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Invoices</h3>
+        <p class="stat-number">89</p>
+      </div>
+      <div class="stat-card">
+        <h3>Paid This Month</h3>
+        <p class="stat-number">$45,200</p>
+      </div>
+    </div>
+
+    <div class="invoice-list">
+      <h2>Recent Invoices</h2>
+      <div class="invoice-item">
+        <div class="invoice-header">
+          <h4>Invoice #INV-2024-015</h4>
+          <span class="status pending">Pending</span>
+        </div>
+        <p>Product A - 50 units | Amount: $12,500</p>
+        <div class="invoice-meta">
+          <span>Due Date: Dec 25, 2024</span>
+          <span>Issued: Dec 10, 2024</span>
+        </div>
+      </div>
+
+      <div class="invoice-item">
+        <div class="invoice-header">
+          <h4>Invoice #INV-2024-014</h4>
+          <span class="status overdue">Overdue</span>
+        </div>
+        <p>Product B - 25 units | Amount: $6,200</p>
+        <div class="invoice-meta">
+          <span>Due Date: Dec 15, 2024</span>
+          <span>Issued: Nov 30, 2024</span>
+        </div>
+      </div>
+
+      <div class="invoice-item">
+        <div class="invoice-header">
+          <h4>Invoice #INV-2024-013</h4>
+          <span class="status paid">Paid</span>
+        </div>
+        <p>Product C - 100 units | Amount: $18,750</p>
+        <div class="invoice-meta">
+          <span>Paid Date: Dec 12, 2024</span>
+          <span>Issued: Nov 25, 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

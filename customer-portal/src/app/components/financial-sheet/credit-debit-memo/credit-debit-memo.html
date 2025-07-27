@@ -1,1 +1,71 @@
-<p>credit-debit-memo works!</p>
+<div class="memo-container">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a routerLink="/financial" class="breadcrumb-link">
+        <span class="material-icons">arrow_back</span>
+        Back to Financial Sheet
+      </a>
+    </div>
+    <h1>
+      <span class="material-icons">swap_horiz</span>
+      Credit/Debit Memo
+    </h1>
+    <p>Manage credit and debit memos</p>
+  </div>
+
+  <div class="memo-content">
+    <div class="memo-stats">
+      <div class="stat-card">
+        <h3>Total Credits</h3>
+        <p class="stat-number">$2,450</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Debits</h3>
+        <p class="stat-number">$1,200</p>
+      </div>
+      <div class="stat-card">
+        <h3>Net Balance</h3>
+        <p class="stat-number positive">+$1,250</p>
+      </div>
+    </div>
+
+    <div class="memo-list">
+      <h2>Recent Memos</h2>
+      <div class="memo-item">
+        <div class="memo-header">
+          <h4>Credit Memo #CM-2024-008</h4>
+          <span class="status credit">Credit</span>
+        </div>
+        <p>Product return - defective items | Amount: $450</p>
+        <div class="memo-meta">
+          <span>Created: Dec 15, 2024</span>
+          <span>Reference: INV-2024-012</span>
+        </div>
+      </div>
+
+      <div class="memo-item">
+        <div class="memo-header">
+          <h4>Debit Memo #DM-2024-003</h4>
+          <span class="status debit">Debit</span>
+        </div>
+        <p>Additional shipping charges | Amount: $200</p>
+        <div class="memo-meta">
+          <span>Created: Dec 12, 2024</span>
+          <span>Reference: SO-2024-011</span>
+        </div>
+      </div>
+
+      <div class="memo-item">
+        <div class="memo-header">
+          <h4>Credit Memo #CM-2024-007</h4>
+          <span class="status credit">Credit</span>
+        </div>
+        <p>Volume discount adjustment | Amount: $2,000</p>
+        <div class="memo-meta">
+          <span>Created: Dec 10, 2024</span>
+          <span>Reference: INV-2024-010</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
