@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-invoice-details',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './invoice-details.html',
   styleUrl: './invoice-details.scss'
 })

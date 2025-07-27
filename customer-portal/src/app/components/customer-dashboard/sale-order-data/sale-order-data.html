@@ -1,1 +1,71 @@
-<p>sale-order-data works!</p>
+<div class="sales-container">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a routerLink="/dashboard" class="breadcrumb-link">
+        <span class="material-icons">arrow_back</span>
+        Back to Dashboard
+      </a>
+    </div>
+    <h1>
+      <span class="material-icons">shopping_cart</span>
+      Sale Order Data
+    </h1>
+    <p>Track your sales orders and order status</p>
+  </div>
+
+  <div class="sales-content">
+    <div class="sales-stats">
+      <div class="stat-card">
+        <h3>Pending Orders</h3>
+        <p class="stat-number">12</p>
+      </div>
+      <div class="stat-card">
+        <h3>Completed Orders</h3>
+        <p class="stat-number">156</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Value</h3>
+        <p class="stat-number">$89,450</p>
+      </div>
+    </div>
+
+    <div class="orders-list">
+      <h2>Recent Orders</h2>
+      <div class="order-item">
+        <div class="order-header">
+          <h4>Order #SO-2024-015</h4>
+          <span class="status pending">Pending</span>
+        </div>
+        <p>Product A - 50 units | Total: $12,500</p>
+        <div class="order-meta">
+          <span>Created: 2 days ago</span>
+          <span>Expected: Dec 25, 2024</span>
+        </div>
+      </div>
+
+      <div class="order-item">
+        <div class="order-header">
+          <h4>Order #SO-2024-014</h4>
+          <span class="status processing">Processing</span>
+        </div>
+        <p>Product B - 25 units | Total: $6,200</p>
+        <div class="order-meta">
+          <span>Created: 5 days ago</span>
+          <span>Expected: Dec 22, 2024</span>
+        </div>
+      </div>
+
+      <div class="order-item">
+        <div class="order-header">
+          <h4>Order #SO-2024-013</h4>
+          <span class="status completed">Completed</span>
+        </div>
+        <p>Product C - 100 units | Total: $18,750</p>
+        <div class="order-meta">
+          <span>Created: 1 week ago</span>
+          <span>Delivered: Dec 15, 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

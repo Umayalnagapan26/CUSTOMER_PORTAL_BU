@@ -1,1 +1,71 @@
-<p>delivery-list works!</p>
+<div class="delivery-container">
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a routerLink="/dashboard" class="breadcrumb-link">
+        <span class="material-icons">arrow_back</span>
+        Back to Dashboard
+      </a>
+    </div>
+    <h1>
+      <span class="material-icons">local_shipping</span>
+      Delivery List
+    </h1>
+    <p>Monitor delivery status and track shipments</p>
+  </div>
+
+  <div class="delivery-content">
+    <div class="delivery-stats">
+      <div class="stat-card">
+        <h3>In Transit</h3>
+        <p class="stat-number">5</p>
+      </div>
+      <div class="stat-card">
+        <h3>Delivered</h3>
+        <p class="stat-number">142</p>
+      </div>
+      <div class="stat-card">
+        <h3>On Time Rate</h3>
+        <p class="stat-number">98.5%</p>
+      </div>
+    </div>
+
+    <div class="delivery-list">
+      <h2>Recent Deliveries</h2>
+      <div class="delivery-item">
+        <div class="delivery-header">
+          <h4>Delivery #DEL-2024-045</h4>
+          <span class="status in-transit">In Transit</span>
+        </div>
+        <p>Order #SO-2024-012 | Product A - 30 units</p>
+        <div class="delivery-meta">
+          <span>Tracking: TRK-892634</span>
+          <span>ETA: Dec 20, 2024</span>
+        </div>
+      </div>
+
+      <div class="delivery-item">
+        <div class="delivery-header">
+          <h4>Delivery #DEL-2024-044</h4>
+          <span class="status delivered">Delivered</span>
+        </div>
+        <p>Order #SO-2024-011 | Product B - 75 units</p>
+        <div class="delivery-meta">
+          <span>Tracking: TRK-892633</span>
+          <span>Delivered: Dec 15, 2024</span>
+        </div>
+      </div>
+
+      <div class="delivery-item">
+        <div class="delivery-header">
+          <h4>Delivery #DEL-2024-043</h4>
+          <span class="status delivered">Delivered</span>
+        </div>
+        <p>Order #SO-2024-010 | Product C - 20 units</p>
+        <div class="delivery-meta">
+          <span>Tracking: TRK-892632</span>
+          <span>Delivered: Dec 12, 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
